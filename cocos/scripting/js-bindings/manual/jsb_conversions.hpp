@@ -110,7 +110,7 @@ bool seval_to_FontDefinition(const se::Value& v, cocos2d::FontDefinition* ret);
 bool seval_to_Acceleration(const se::Value& v, cocos2d::Acceleration* ret);
 bool seval_to_Quaternion(const se::Value& v, cocos2d::Quaternion* ret);
 bool seval_to_AffineTransform(const se::Value& v, cocos2d::AffineTransform* ret);
-//bool seval_to_Viewport(const se::Value& v, cocos2d::experimental::Viewport* ret);
+bool seval_to_Viewport(const se::Value& v, cocos2d::experimental::Viewport* ret);
 bool seval_to_Data(const se::Value& v, cocos2d::Data* ret);
 bool seval_to_DownloaderHints(const se::Value& v, cocos2d::network::DownloaderHints* ret);
 bool seval_to_TTFConfig(const se::Value& v, cocos2d::TTFConfig* ret);
@@ -260,7 +260,7 @@ bool Acceleration_to_seval(const cocos2d::Acceleration* v, se::Value* ret);
 bool Quaternion_to_seval(const cocos2d::Quaternion& v, se::Value* ret);
 bool ManifestAsset_to_seval(const cocos2d::extension::ManifestAsset& v, se::Value* ret);
 bool AffineTransform_to_seval(const cocos2d::AffineTransform& v, se::Value* ret);
-//bool Viewport_to_seval(const cocos2d::experimental::Viewport& v, se::Value* ret);
+bool Viewport_to_seval(const cocos2d::experimental::Viewport& v, se::Value* ret);
 bool Data_to_seval(const cocos2d::Data& v, se::Value* ret);
 bool DownloadTask_to_seval(const cocos2d::network::DownloadTask& v, se::Value* ret);
 

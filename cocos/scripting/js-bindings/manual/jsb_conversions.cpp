@@ -1040,34 +1040,34 @@ bool seval_to_AffineTransform(const se::Value& v, cocos2d::AffineTransform* ret)
     return true;
 }
 
-//bool seval_to_Viewport(const se::Value& v, cocos2d::experimental::Viewport* ret)
-//{
-//    static cocos2d::experimental::Viewport ZERO = {0, 0, 0, 0};
-//
-//    assert(ret != nullptr);
-//    assert(v.isObject());
-//    se::Value tmp;
-//    se::Object* obj = v.toObject();
-//    bool ok = false;
-//
-//    ok = obj->getProperty("left", &tmp);
-//    SE_PRECONDITION3(ok && tmp.isNumber(), false, *ret = ZERO);
-//    ret->_left = tmp.toFloat();
-//
-//    ok = obj->getProperty("bottom", &tmp);
-//    SE_PRECONDITION3(ok && tmp.isNumber(), false, *ret = ZERO);
-//    ret->_bottom = tmp.toFloat();
-//
-//    ok = obj->getProperty("width", &tmp);
-//    SE_PRECONDITION3(ok && tmp.isNumber(), false, *ret = ZERO);
-//    ret->_width = tmp.toFloat();
-//
-//    ok = obj->getProperty("height", &tmp);
-//    SE_PRECONDITION3(ok && tmp.isNumber(), false, *ret = ZERO);
-//    ret->_height = tmp.toFloat();
-//
-//    return true;
-//}
+bool seval_to_Viewport(const se::Value& v, cocos2d::experimental::Viewport* ret)
+{
+    static cocos2d::experimental::Viewport ZERO = {0, 0, 0, 0};
+
+    assert(ret != nullptr);
+    assert(v.isObject());
+    se::Value tmp;
+    se::Object* obj = v.toObject();
+    bool ok = false;
+
+    ok = obj->getProperty("left", &tmp);
+    SE_PRECONDITION3(ok && tmp.isNumber(), false, *ret = ZERO);
+    ret->_left = tmp.toFloat();
+
+    ok = obj->getProperty("bottom", &tmp);
+    SE_PRECONDITION3(ok && tmp.isNumber(), false, *ret = ZERO);
+    ret->_bottom = tmp.toFloat();
+
+    ok = obj->getProperty("width", &tmp);
+    SE_PRECONDITION3(ok && tmp.isNumber(), false, *ret = ZERO);
+    ret->_width = tmp.toFloat();
+
+    ok = obj->getProperty("height", &tmp);
+    SE_PRECONDITION3(ok && tmp.isNumber(), false, *ret = ZERO);
+    ret->_height = tmp.toFloat();
+
+    return true;
+}
 
 bool seval_to_Data(const se::Value& v, cocos2d::Data* ret)
 {
@@ -1770,18 +1770,18 @@ bool AffineTransform_to_seval(const cocos2d::AffineTransform& v, se::Value* ret)
     return true;
 }
 
-//bool Viewport_to_seval(const cocos2d::experimental::Viewport& v, se::Value* ret)
-//{
-//    assert(ret != nullptr);
-//    se::HandleObject obj(se::Object::createPlainObject());
-//    obj->setProperty("left", se::Value(v._left));
-//    obj->setProperty("bottom", se::Value(v._bottom));
-//    obj->setProperty("width", se::Value(v._width));
-//    obj->setProperty("height", se::Value(v._height));
-//    ret->setObject(obj);
-//
-//    return true;
-//}
+bool Viewport_to_seval(const cocos2d::experimental::Viewport& v, se::Value* ret)
+{
+    assert(ret != nullptr);
+    se::HandleObject obj(se::Object::createPlainObject());
+    obj->setProperty("left", se::Value(v._left));
+    obj->setProperty("bottom", se::Value(v._bottom));
+    obj->setProperty("width", se::Value(v._width));
+    obj->setProperty("height", se::Value(v._height));
+    ret->setObject(obj);
+
+    return true;
+}
 
 bool Data_to_seval(const cocos2d::Data& v, se::Value* ret)
 {
