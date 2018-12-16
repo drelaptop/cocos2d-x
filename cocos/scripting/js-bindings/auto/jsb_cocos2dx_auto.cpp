@@ -7371,7 +7371,7 @@ static bool js_cocos2dx_Scheduler_performFunctionInCocosThread(se::State& s)
             {
                 se::Value jsThis(s.thisObject());
                 se::Value jsFunc(args[0]);
-                jsThis.toObject()->attachObject(jsFunc.toObject());
+                jsFunc.toObject()->root();
                 auto lambda = [=]() -> void {
                     se::ScriptEngine::getInstance()->clearException();
                     se::AutoHandleScope hs;
@@ -15862,7 +15862,7 @@ static bool js_cocos2dx_FileUtils_getStringFromFile(se::State& s)
                 {
                     se::Value jsThis(s.thisObject());
                     se::Value jsFunc(args[1]);
-                    jsThis.toObject()->attachObject(jsFunc.toObject());
+                    jsFunc.toObject()->root();
                     auto lambda = [=](std::basic_string<char> larg0) -> void {
                         se::ScriptEngine::getInstance()->clearException();
                         se::AutoHandleScope hs;
@@ -15928,7 +15928,7 @@ static bool js_cocos2dx_FileUtils_removeFile(se::State& s)
                 {
                     se::Value jsThis(s.thisObject());
                     se::Value jsFunc(args[1]);
-                    jsThis.toObject()->attachObject(jsFunc.toObject());
+                    jsFunc.toObject()->root();
                     auto lambda = [=](bool larg0) -> void {
                         se::ScriptEngine::getInstance()->clearException();
                         se::AutoHandleScope hs;
@@ -16021,7 +16021,7 @@ static bool js_cocos2dx_FileUtils_renameFile(se::State& s)
                 {
                     se::Value jsThis(s.thisObject());
                     se::Value jsFunc(args[3]);
-                    jsThis.toObject()->attachObject(jsFunc.toObject());
+                    jsFunc.toObject()->root();
                     auto lambda = [=](bool larg0) -> void {
                         se::ScriptEngine::getInstance()->clearException();
                         se::AutoHandleScope hs;
@@ -16099,7 +16099,7 @@ static bool js_cocos2dx_FileUtils_renameFile(se::State& s)
                 {
                     se::Value jsThis(s.thisObject());
                     se::Value jsFunc(args[2]);
-                    jsThis.toObject()->attachObject(jsFunc.toObject());
+                    jsFunc.toObject()->root();
                     auto lambda = [=](bool larg0) -> void {
                         se::ScriptEngine::getInstance()->clearException();
                         se::AutoHandleScope hs;
@@ -16351,7 +16351,7 @@ static bool js_cocos2dx_FileUtils_getFileSize(se::State& s)
                 {
                     se::Value jsThis(s.thisObject());
                     se::Value jsFunc(args[1]);
-                    jsThis.toObject()->attachObject(jsFunc.toObject());
+                    jsFunc.toObject()->root();
                     auto lambda = [=](long larg0) -> void {
                         se::ScriptEngine::getInstance()->clearException();
                         se::AutoHandleScope hs;
@@ -16440,7 +16440,7 @@ static bool js_cocos2dx_FileUtils_removeDirectory(se::State& s)
                 {
                     se::Value jsThis(s.thisObject());
                     se::Value jsFunc(args[1]);
-                    jsThis.toObject()->attachObject(jsFunc.toObject());
+                    jsFunc.toObject()->root();
                     auto lambda = [=](bool larg0) -> void {
                         se::ScriptEngine::getInstance()->clearException();
                         se::AutoHandleScope hs;
@@ -16528,7 +16528,7 @@ static bool js_cocos2dx_FileUtils_writeStringToFile(se::State& s)
                 {
                     se::Value jsThis(s.thisObject());
                     se::Value jsFunc(args[2]);
-                    jsThis.toObject()->attachObject(jsFunc.toObject());
+                    jsFunc.toObject()->root();
                     auto lambda = [=](bool larg0) -> void {
                         se::ScriptEngine::getInstance()->clearException();
                         se::AutoHandleScope hs;
@@ -16675,7 +16675,7 @@ static bool js_cocos2dx_FileUtils_writeValueVectorToFile(se::State& s)
                 {
                     se::Value jsThis(s.thisObject());
                     se::Value jsFunc(args[2]);
-                    jsThis.toObject()->attachObject(jsFunc.toObject());
+                    jsFunc.toObject()->root();
                     auto lambda = [=](bool larg0) -> void {
                         se::ScriptEngine::getInstance()->clearException();
                         se::AutoHandleScope hs;
@@ -16744,7 +16744,7 @@ static bool js_cocos2dx_FileUtils_isFileExist(se::State& s)
                 {
                     se::Value jsThis(s.thisObject());
                     se::Value jsFunc(args[1]);
-                    jsThis.toObject()->attachObject(jsFunc.toObject());
+                    jsFunc.toObject()->root();
                     auto lambda = [=](bool larg0) -> void {
                         se::ScriptEngine::getInstance()->clearException();
                         se::AutoHandleScope hs;
@@ -16872,7 +16872,7 @@ static bool js_cocos2dx_FileUtils_writeValueMapToFile(se::State& s)
                 {
                     se::Value jsThis(s.thisObject());
                     se::Value jsFunc(args[2]);
-                    jsThis.toObject()->attachObject(jsFunc.toObject());
+                    jsFunc.toObject()->root();
                     auto lambda = [=](bool larg0) -> void {
                         se::ScriptEngine::getInstance()->clearException();
                         se::AutoHandleScope hs;
@@ -17000,7 +17000,7 @@ static bool js_cocos2dx_FileUtils_isDirectoryExist(se::State& s)
                 {
                     se::Value jsThis(s.thisObject());
                     se::Value jsFunc(args[1]);
-                    jsThis.toObject()->attachObject(jsFunc.toObject());
+                    jsFunc.toObject()->root();
                     auto lambda = [=](bool larg0) -> void {
                         se::ScriptEngine::getInstance()->clearException();
                         se::AutoHandleScope hs;
@@ -17103,7 +17103,7 @@ static bool js_cocos2dx_FileUtils_createDirectory(se::State& s)
                 {
                     se::Value jsThis(s.thisObject());
                     se::Value jsFunc(args[1]);
-                    jsThis.toObject()->attachObject(jsFunc.toObject());
+                    jsFunc.toObject()->root();
                     auto lambda = [=](bool larg0) -> void {
                         se::ScriptEngine::getInstance()->clearException();
                         se::AutoHandleScope hs;
@@ -50265,7 +50265,7 @@ static bool js_cocos2dx_TextureCache_addImageAsync(se::State& s)
                 {
                     se::Value jsThis(s.thisObject());
                     se::Value jsFunc(args[1]);
-                    jsThis.toObject()->attachObject(jsFunc.toObject());
+                    jsFunc.toObject()->root();
                     auto lambda = [=](cocos2d::Texture2D* larg0) -> void {
                         se::ScriptEngine::getInstance()->clearException();
                         se::AutoHandleScope hs;
@@ -50310,7 +50310,7 @@ static bool js_cocos2dx_TextureCache_addImageAsync(se::State& s)
                 {
                     se::Value jsThis(s.thisObject());
                     se::Value jsFunc(args[1]);
-                    jsThis.toObject()->attachObject(jsFunc.toObject());
+                    jsFunc.toObject()->root();
                     auto lambda = [=](cocos2d::Texture2D* larg0) -> void {
                         se::ScriptEngine::getInstance()->clearException();
                         se::AutoHandleScope hs;
