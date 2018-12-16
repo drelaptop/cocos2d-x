@@ -202,7 +202,7 @@ bool Director::init(void)
 
 Director::~Director(void)
 {
-    CCLOGINFO("deallocing Director: %p", this);
+    CCLOG("deallocing Director: %p", this);
 
     CC_SAFE_RELEASE(_FPSLabel);
     CC_SAFE_RELEASE(_drawnVerticesLabel);
@@ -1030,6 +1030,14 @@ void Director::popToSceneStackLevel(int level)
 void Director::end()
 {
     _purgeDirectorInNextLoop = true;
+#if CC_ENABLE_SCRIPT_BINDING
+    // hack, it should be a bug in bindings 2d-x & jsb 2.0
+    // _referenceCount should be 1, or "purgeDirector()" will run without director deleted
+    if (this->_referenceCount > 1) {
+        CCLOG("WARN: Director _referenceCount: %d\n", this->getReferenceCount());
+        this->_referenceCount = 1;;
+    }
+#endif
 }
 
 void Director::restart()
