@@ -31,16 +31,13 @@
 //
 //
 
-#define USE_VIDEO 1
-#define USE_WEBVIEW 1
-#define USE_EDIT_BOX 1
-#define USE_CREATOR_PHYSICS 1
-#define USE_CREATOR_CAMERA 1
-#define USE_CREATOR_GRAPHICS 1
+#define USE_VIDEO 0
+#define USE_WEBVIEW 0
+#define USE_EDIT_BOX 0
 #define USE_AUDIO 1
-#define USE_SPINE 1
-#define USE_DRAGON_BONES 1
-#define USE_NET_WORK 1
+#define USE_SPINE 0
+#define USE_DRAGON_BONES 0
+#define USE_NET_WORK 0
 
 
 #include "cocos/scripting/js-bindings/manual/jsb_module_register.hpp"
@@ -49,10 +46,8 @@
 #include "cocos/scripting/js-bindings/auto/jsb_cocos2dx_auto.hpp"
 #include "cocos/scripting/js-bindings/auto/jsb_cocos2dx_extension_auto.hpp"
 #include "cocos/scripting/js-bindings/auto/jsb_cocos2dx_network_auto.hpp"
-#include "cocos/scripting/js-bindings/auto/jsb_creator_auto.hpp"
 
 #include "cocos/scripting/js-bindings/manual/jsb_opengl_registration.hpp"
-#include "cocos/scripting/js-bindings/manual/jsb_creator_manual.hpp"
 #include "cocos/scripting/js-bindings/manual/jsb_cocos2dx_extension_manual.hpp"
 #include "cocos/scripting/js-bindings/manual/jsb_global.h"
 #include "cocos/scripting/js-bindings/manual/jsb_node.hpp"
@@ -202,13 +197,14 @@ bool jsb_register_all_modules()
     se->addRegisterCallback(register_all_xmlhttprequest);
     se->addRegisterCallback(register_all_websocket);
     se->addRegisterCallback(register_all_socketio);
-#endif
-    
+
     se->addRegisterCallback(register_all_creator);
     se->addRegisterCallback(register_all_creator_manual);
 
     se->addRegisterCallback(register_all_cocos2dx_extension);
     se->addRegisterCallback(register_all_cocos2dx_extension_manual);
+#endif
+    
 
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS || CC_TARGET_PLATFORM == CC_PLATFORM_MAC)
     se->addRegisterCallback(register_javascript_objc_bridge);

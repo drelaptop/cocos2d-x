@@ -53,6 +53,7 @@ static bool jsb_cocos2dx_empty_func(se::State& s)
 }
 SE_BIND_FUNC(jsb_cocos2dx_empty_func)
 
+#if 0
 class __JSPlistDelegator: public cocos2d::SAXDelegator
 {
 public:
@@ -224,7 +225,7 @@ static bool register_plist_parser(se::Object* obj)
 
     return true;
 }
-
+#endif
 // cc.sys.localStorage
 
 static bool JSB_localStorageGetItem(se::State& s)
@@ -1968,6 +1969,7 @@ static bool register_texture2d_manual(se::Object* obj)
     return true;
 }
 
+#if 0
 class JSB_EditBoxDelegate
 : public Ref
 , public ui::EditBoxDelegate
@@ -2119,6 +2121,7 @@ bool register_ui_manual(se::Object* obj)
     se::ScriptEngine::getInstance()->clearException();
     return true;
 }
+#endif
 
 static bool register_tilemap_manual(se::Object* obj)
 {
@@ -2130,7 +2133,7 @@ static bool register_tilemap_manual(se::Object* obj)
 
 bool register_all_cocos2dx_manual(se::Object* obj)
 {
-    register_plist_parser(obj);
+//    register_plist_parser(obj);
     register_sys_localStorage(obj);
     register_eventlistener(obj);
     register_actions(obj);
@@ -2138,17 +2141,18 @@ bool register_all_cocos2dx_manual(se::Object* obj)
     register_texture2d_manual(obj);
     register_tilemap_manual(obj);
 
-    Director::getInstance()->getEventDispatcher()->setBeforeDispatchEventHook(Event::Type::TOUCH, onBeforeDispatchTouchEvent);
-    Director::getInstance()->getEventDispatcher()->setAfterDispatchEventHook(Event::Type::TOUCH, onAfterDispatchTouchEvent);
-
-    TextureCache::setTextureCreateHook(onTextureCreate);
-    TextureCache::setTextureDestroyHook(onTextureDestroy);
-
-    GLProgramCache::setGLProgramCreateHook(onGLProgramCreate);
-    GLProgramCache::setGLProgramDestroyHook(onGLProgramDestroy);
-
-    GLProgramStateCache::setGLProgramStateCreateHook(onGLProgramStateCreate);
-    GLProgramStateCache::setGLProgramStateDestroyHook(onGLProgramStateDestroy);
+//    TODO
+//    Director::getInstance()->getEventDispatcher()->setBeforeDispatchEventHook(Event::Type::TOUCH, onBeforeDispatchTouchEvent);
+//    Director::getInstance()->getEventDispatcher()->setAfterDispatchEventHook(Event::Type::TOUCH, onAfterDispatchTouchEvent);
+//
+//    TextureCache::setTextureCreateHook(onTextureCreate);
+//    TextureCache::setTextureDestroyHook(onTextureDestroy);
+//
+//    GLProgramCache::setGLProgramCreateHook(onGLProgramCreate);
+//    GLProgramCache::setGLProgramDestroyHook(onGLProgramDestroy);
+//
+//    GLProgramStateCache::setGLProgramStateCreateHook(onGLProgramStateCreate);
+//    GLProgramStateCache::setGLProgramStateDestroyHook(onGLProgramStateDestroy);
 
     return true;
 }

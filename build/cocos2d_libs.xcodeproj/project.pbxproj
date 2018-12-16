@@ -1468,6 +1468,10 @@
 		3EACC9A519F5014D00EB3C5E /* CCLight.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3EACC99E19F5014D00EB3C5E /* CCLight.cpp */; };
 		3EACC9A619F5014D00EB3C5E /* CCLight.h in Headers */ = {isa = PBXBuildFile; fileRef = 3EACC99F19F5014D00EB3C5E /* CCLight.h */; };
 		3EACC9A719F5014D00EB3C5E /* CCLight.h in Headers */ = {isa = PBXBuildFile; fileRef = 3EACC99F19F5014D00EB3C5E /* CCLight.h */; };
+		40AB4DFA21C6694F00A96D1B /* CCThreadPool.h in Headers */ = {isa = PBXBuildFile; fileRef = 40AB4DF821C6694D00A96D1B /* CCThreadPool.h */; };
+		40AB4DFB21C6694F00A96D1B /* CCThreadPool.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 40AB4DF921C6694E00A96D1B /* CCThreadPool.cpp */; };
+		40AB4DFC21C6695600A96D1B /* CCThreadPool.h in Headers */ = {isa = PBXBuildFile; fileRef = 40AB4DF821C6694D00A96D1B /* CCThreadPool.h */; };
+		40AB4DFD21C6695800A96D1B /* CCThreadPool.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 40AB4DF921C6694E00A96D1B /* CCThreadPool.cpp */; };
 		43015DBF1B60DF4000E75161 /* CCComExtensionData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 43015DBD1B60DF4000E75161 /* CCComExtensionData.cpp */; };
 		43015DC01B60DF4000E75161 /* CCComExtensionData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 43015DBD1B60DF4000E75161 /* CCComExtensionData.cpp */; };
 		43015DC11B60DF4000E75161 /* CCComExtensionData.h in Headers */ = {isa = PBXBuildFile; fileRef = 43015DBE1B60DF4000E75161 /* CCComExtensionData.h */; };
@@ -5272,6 +5276,8 @@
 		3EACC99D19F5014D00EB3C5E /* CCCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCamera.h; sourceTree = "<group>"; };
 		3EACC99E19F5014D00EB3C5E /* CCLight.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCLight.cpp; sourceTree = "<group>"; };
 		3EACC99F19F5014D00EB3C5E /* CCLight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCLight.h; sourceTree = "<group>"; };
+		40AB4DF821C6694D00A96D1B /* CCThreadPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCThreadPool.h; path = ../base/CCThreadPool.h; sourceTree = "<group>"; };
+		40AB4DF921C6694E00A96D1B /* CCThreadPool.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CCThreadPool.cpp; path = ../base/CCThreadPool.cpp; sourceTree = "<group>"; };
 		43015DBD1B60DF4000E75161 /* CCComExtensionData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCComExtensionData.cpp; sourceTree = "<group>"; };
 		43015DBE1B60DF4000E75161 /* CCComExtensionData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCComExtensionData.h; sourceTree = "<group>"; };
 		46270FA21E1CC6A100AAA098 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = ../external/openssl/prebuilt/mac/libcrypto.a; sourceTree = "<group>"; };
@@ -6745,6 +6751,8 @@
 		1A5700A2180BC5E60088DEC7 /* base */ = {
 			isa = PBXGroup;
 			children = (
+				40AB4DF921C6694E00A96D1B /* CCThreadPool.cpp */,
+				40AB4DF821C6694D00A96D1B /* CCThreadPool.h */,
 				291901411B05895600F8B4BA /* CCNinePatchImageParser.h */,
 				291901421B05895600F8B4BA /* CCNinePatchImageParser.cpp */,
 				505385001B01887A00793096 /* CCProperties.h */,
@@ -10136,6 +10144,7 @@
 				50ABBE6F1925AB6F00A911A9 /* CCEventListenerKeyboard.h in Headers */,
 				15AE1A5619AAD40300C27E9E /* b2Math.h in Headers */,
 				18956BB41A9DFBFD006E9155 /* Particle3DReader.h in Headers */,
+				40AB4DFA21C6694F00A96D1B /* CCThreadPool.h in Headers */,
 				50ABBE9D1925AB6F00A911A9 /* CCRefPtr.h in Headers */,
 				15AE198319AAD36400C27E9E /* WidgetReader.h in Headers */,
 				B257B461198A353E00D9A687 /* CCPrimitiveCommand.h in Headers */,
@@ -11838,6 +11847,7 @@
 				46C02E0A18E91123004B7456 /* xxhash.h in Headers */,
 				5034CA4C191D591100CE6051 /* ccShader_Label_df_glow.frag in Headers */,
 				503DD8EB1926736A00CD74DD /* CCGL-ios.h in Headers */,
+				40AB4DFC21C6695600A96D1B /* CCThreadPool.h in Headers */,
 				1A40D1671E8E56C7002E363A /* reader.h in Headers */,
 				B665E4091AA80A6600DDB1C5 /* CCPUSphereSurfaceEmitter.h in Headers */,
 				50ABBE3C1925AB6F00A911A9 /* CCData.h in Headers */,
@@ -12832,6 +12842,7 @@
 				B665E2561AA80A6500DDB1C5 /* CCPUDoAffectorEventHandlerTranslator.cpp in Sources */,
 				15AE18A419AAD33D00C27E9E /* CCScale9SpriteLoader.cpp in Sources */,
 				2962D6041C61F02E004821A3 /* CCUITextFieldFormatter.m in Sources */,
+				40AB4DFB21C6694F00A96D1B /* CCThreadPool.cpp in Sources */,
 				182C5CD61A98F30500C30D34 /* Sprite3DReader.cpp in Sources */,
 				38D9629D1ACA9721007C6FAF /* CocoStudio.cpp in Sources */,
 				B665E3D61AA80A6600DDB1C5 /* CCPUScriptParser.cpp in Sources */,
@@ -14048,6 +14059,7 @@
 				15AE1B8F19AADA9A00C27E9E /* UIDeprecated.cpp in Sources */,
 				5020A1691D49912500E80C72 /* AtlasAttachmentLoader.c in Sources */,
 				464AD6E6197EBB1400E502D8 /* pvr.cpp in Sources */,
+				40AB4DFD21C6695800A96D1B /* CCThreadPool.cpp in Sources */,
 				5E9F61271A3FFE3D0038DE01 /* CCFrustum.cpp in Sources */,
 				B665E22B1AA80A6500DDB1C5 /* CCPUBoxCollider.cpp in Sources */,
 				B665E3031AA80A6500DDB1C5 /* CCPUMeshSurfaceEmitter.cpp in Sources */,
