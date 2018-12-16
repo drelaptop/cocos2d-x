@@ -6716,9 +6716,13 @@ char
 
 /**
  * @method getString
+ * @param {char} arg0
+ * @param {char} arg1
  * @return {char}
  */
 getString : function (
+char, 
+char 
 )
 {
     return 0;
@@ -6726,9 +6730,11 @@ getString : function (
 
 /**
  * @method getLong
+ * @param {char} arg0
  * @return {long}
  */
 getLong : function (
+char 
 )
 {
     return 0;
@@ -6836,9 +6842,13 @@ char
 
 /**
  * @method getBool
+ * @param {char} arg0
+ * @param {bool} arg1
  * @return {bool}
  */
 getBool : function (
+char, 
+bool 
 )
 {
     return false;
@@ -6860,9 +6870,11 @@ vec3
 
 /**
  * @method getType
+ * @param {char} arg0
  * @return {cc.Properties::Type}
  */
 getType : function (
+char 
 )
 {
     return 0;
@@ -6880,9 +6892,11 @@ getNextNamespace : function (
 
 /**
  * @method getInt
+ * @param {char} arg0
  * @return {int}
  */
 getInt : function (
+char 
 )
 {
     return 0;
@@ -6942,9 +6956,11 @@ getNextProperty : function (
 
 /**
  * @method getFloat
+ * @param {char} arg0
  * @return {float}
  */
 getFloat : function (
+char 
 )
 {
     return 0;
@@ -13874,7 +13890,7 @@ float
 * @param {color4b_object|color4b_object} color4b
 * @param {float} float
 * @param {float} float
-* @return {bool|bool}
+* @return {bool|bool|bool}
 */
 initWithColor : function(
 color4b,
@@ -23070,15 +23086,15 @@ getParallaxArray : function(
 
 /**
  * @method addChild
- * @param {cc.Node} arg0
- * @param {int} arg1
- * @param {vec2_object} arg2
- * @param {vec2_object} arg3
- */
-addChild : function (
-node, 
-int, 
-vec2, 
+* @param {cc.Node|cc.Node|cc.Node} node
+* @param {int|int|int} int
+* @param {vec2_object|int|String} vec2
+* @param {vec2_object} vec2
+*/
+addChild : function(
+node,
+int,
+vec2,
 vec2 
 )
 {

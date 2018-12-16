@@ -1516,16 +1516,16 @@ texturerestype
 
 /**
  * @method init
- * @param {String} arg0
- * @param {String} arg1
- * @param {String} arg2
- * @param {ccui.Widget::TextureResType} arg3
- * @return {bool}
- */
-init : function (
-str, 
-str, 
-str, 
+* @param {String} str
+* @param {String} str
+* @param {String} str
+* @param {ccui.Widget::TextureResType} texturerestype
+* @return {bool|bool}
+*/
+init : function(
+str,
+str,
+str,
 texturerestype 
 )
 {
@@ -1896,20 +1896,20 @@ isSelected : function (
 
 /**
  * @method init
- * @param {String} arg0
- * @param {String} arg1
- * @param {String} arg2
- * @param {String} arg3
- * @param {String} arg4
- * @param {ccui.Widget::TextureResType} arg5
- * @return {bool}
- */
-init : function (
-str, 
-str, 
-str, 
-str, 
-str, 
+* @param {String} str
+* @param {String} str
+* @param {String} str
+* @param {String} str
+* @param {String} str
+* @param {ccui.Widget::TextureResType} texturerestype
+* @return {bool|bool}
+*/
+init : function(
+str,
+str,
+str,
+str,
+str,
 texturerestype 
 )
 {
@@ -2505,14 +2505,14 @@ getOutlineSize : function (
 
 /**
  * @method init
- * @param {String} arg0
- * @param {String} arg1
- * @param {float} arg2
- * @return {bool}
- */
-init : function (
-str, 
-str, 
+* @param {String} str
+* @param {String} str
+* @param {float} float
+* @return {bool|bool}
+*/
+init : function(
+str,
+str,
 float 
 )
 {
@@ -6750,12 +6750,12 @@ float
 
 /**
  * @method initWithSpriteFrameName
- * @param {String} arg0
- * @param {rect_object} arg1
- * @return {bool}
- */
-initWithSpriteFrameName : function (
-str, 
+* @param {String|String} str
+* @param {rect_object} rect
+* @return {bool|bool}
+*/
+initWithSpriteFrameName : function(
+str,
 rect 
 )
 {
@@ -6796,11 +6796,11 @@ renderingtype
  * @method init
 * @param {cc.Sprite|cc.Sprite|cc.Sprite} sprite
 * @param {rect_object|rect_object|rect_object} rect
-* @param {rect_object|bool|bool} rect
+* @param {bool|rect_object|bool} bool
 * @param {rect_object|vec2_object} rect
 * @param {size_object} size
 * @param {rect_object} rect
-* @return {bool|bool|bool}
+* @return {bool|bool|bool|bool}
 */
 init : function(
 sprite,
@@ -6926,10 +6926,10 @@ getOriginalSize : function (
 
 /**
  * @method initWithFile
-* @param {rect_object|String} rect
-* @param {String|rect_object} str
+* @param {rect_object|String|String|String} rect
+* @param {String|rect_object|rect_object} str
 * @param {rect_object} rect
-* @return {bool|bool}
+* @return {bool|bool|bool|bool}
 */
 initWithFile : function(
 str,
