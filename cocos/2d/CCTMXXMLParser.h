@@ -289,7 +289,7 @@ public:
      * @js NA
      * @lua NA
      */
-    void textHandler(void *ctx, const char *ch, size_t len) override;
+    void textHandler(void *ctx, const char *ch, int len) override;
     
     const std::string& getCurrentString() const { return _currentString; }
     void setCurrentString(const std::string& currentString){ _currentString = currentString; }

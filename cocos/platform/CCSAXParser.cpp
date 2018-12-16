@@ -83,7 +83,7 @@ bool XmlSaxHander::VisitExit( const tinyxml2::XMLElement& element )
 bool XmlSaxHander::Visit( const tinyxml2::XMLText& text )
 {
     //log("Visit %s",text.Value());
-    SAXParser::textHandler(_ccsaxParserImp, (const CC_XML_CHAR *)text.Value(), strlen(text.Value()));
+    SAXParser::textHandler(_ccsaxParserImp, (const CC_XML_CHAR *)text.Value(), static_cast<int>(strlen(text.Value())));
     return true;
 }
 
@@ -183,7 +183,7 @@ void SAXParser::endElement(void *ctx, const CC_XML_CHAR *name)
 {
     ((SAXParser*)(ctx))->_delegator->endElement(ctx, (char*)name);
 }
-void SAXParser::textHandler(void *ctx, const CC_XML_CHAR *name, size_t len)
+void SAXParser::textHandler(void *ctx, const CC_XML_CHAR *name, int len)
 {
     ((SAXParser*)(ctx))->_delegator->textHandler(ctx, (char*)name, len);
 }

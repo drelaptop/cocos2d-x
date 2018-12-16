@@ -53,7 +53,6 @@ static bool jsb_cocos2dx_empty_func(se::State& s)
 }
 SE_BIND_FUNC(jsb_cocos2dx_empty_func)
 
-#if 0
 class __JSPlistDelegator: public cocos2d::SAXDelegator
 {
 public:
@@ -225,7 +224,6 @@ static bool register_plist_parser(se::Object* obj)
 
     return true;
 }
-#endif
 // cc.sys.localStorage
 
 static bool JSB_localStorageGetItem(se::State& s)
@@ -2133,7 +2131,7 @@ static bool register_tilemap_manual(se::Object* obj)
 
 bool register_all_cocos2dx_manual(se::Object* obj)
 {
-//    register_plist_parser(obj);
+    register_plist_parser(obj);
     register_sys_localStorage(obj);
     register_eventlistener(obj);
     register_actions(obj);

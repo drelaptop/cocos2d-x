@@ -336,7 +336,7 @@ public:
 
     void endElement(void *ctx, const char *name) override;
 
-    void textHandler(void *ctx, const char *s, size_t len) override;
+    void textHandler(void *ctx, const char *s, int len) override;
 
     
     void pushBackFontElement(const Attributes& attribs);
@@ -764,7 +764,7 @@ void MyXMLVisitor::endElement(void* /*ctx*/, const char *elementName)
     }
 }
 
-void MyXMLVisitor::textHandler(void* /*ctx*/, const char *str, size_t len)
+void MyXMLVisitor::textHandler(void* /*ctx*/, const char *str, int len)
 {
     std::string text(str, len);
     auto color = getColor();
