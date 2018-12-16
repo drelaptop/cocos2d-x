@@ -3427,16 +3427,6 @@ float
 },
 
 /**
- * @method unscheduleAllWithMinPriority
- * @param {int} arg0
- */
-unscheduleAllWithMinPriority : function (
-int 
-)
-{
-},
-
-/**
  * @method update
  * @param {float} arg0
  */
@@ -3451,6 +3441,34 @@ float
  * @param {unsigned int} arg0
  */
 unscheduleScriptEntry : function (
+int 
+)
+{
+},
+
+/**
+ * @method unscheduleAll
+ */
+unscheduleAll : function (
+)
+{
+},
+
+/**
+ * @method getTimeScale
+ * @return {float}
+ */
+getTimeScale : function (
+)
+{
+    return 0;
+},
+
+/**
+ * @method unscheduleAllWithMinPriority
+ * @param {int} arg0
+ */
+unscheduleAllWithMinPriority : function (
 int 
 )
 {
@@ -3472,24 +3490,6 @@ func
 removeAllFunctionsToBePerformedInCocosThread : function (
 )
 {
-},
-
-/**
- * @method unscheduleAll
- */
-unscheduleAll : function (
-)
-{
-},
-
-/**
- * @method getTimeScale
- * @return {float}
- */
-getTimeScale : function (
-)
-{
-    return 0;
 },
 
 /**
@@ -24607,12 +24607,5 @@ getInstance : function (
 {
     return cc.SimpleAudioEngine;
 },
-
-};
-
-/**
- * @class ComponentJS
- */
-cc.ComponentJS = {
 
 };

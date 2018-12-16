@@ -399,13 +399,13 @@ extern se::Class* __jsb_cocos2d_Scheduler_class;
 bool js_register_cocos2d_Scheduler(se::Object* obj);
 bool register_all_cocos2dx(se::Object* obj);
 SE_DECLARE_FUNC(js_cocos2dx_Scheduler_setTimeScale);
-SE_DECLARE_FUNC(js_cocos2dx_Scheduler_unscheduleAllWithMinPriority);
 SE_DECLARE_FUNC(js_cocos2dx_Scheduler_update);
 SE_DECLARE_FUNC(js_cocos2dx_Scheduler_unscheduleScriptEntry);
-SE_DECLARE_FUNC(js_cocos2dx_Scheduler_performFunctionInCocosThread);
-SE_DECLARE_FUNC(js_cocos2dx_Scheduler_removeAllFunctionsToBePerformedInCocosThread);
 SE_DECLARE_FUNC(js_cocos2dx_Scheduler_unscheduleAll);
 SE_DECLARE_FUNC(js_cocos2dx_Scheduler_getTimeScale);
+SE_DECLARE_FUNC(js_cocos2dx_Scheduler_unscheduleAllWithMinPriority);
+SE_DECLARE_FUNC(js_cocos2dx_Scheduler_performFunctionInCocosThread);
+SE_DECLARE_FUNC(js_cocos2dx_Scheduler_removeAllFunctionsToBePerformedInCocosThread);
 SE_DECLARE_FUNC(js_cocos2dx_Scheduler_Scheduler);
 
 extern se::Object* __jsb_cocos2d_AsyncTaskPool_proto;
@@ -3683,10 +3683,4 @@ SE_DECLARE_FUNC(js_cocos2dx_SimpleAudioEngine_unloadEffect);
 SE_DECLARE_FUNC(js_cocos2dx_SimpleAudioEngine_resumeEffect);
 SE_DECLARE_FUNC(js_cocos2dx_SimpleAudioEngine_end);
 SE_DECLARE_FUNC(js_cocos2dx_SimpleAudioEngine_getInstance);
-
-extern se::Object* __jsb_cocos2d_ComponentJS_proto;
-extern se::Class* __jsb_cocos2d_ComponentJS_class;
-
-bool js_register_cocos2d_ComponentJS(se::Object* obj);
-bool register_all_cocos2dx(se::Object* obj);
 
