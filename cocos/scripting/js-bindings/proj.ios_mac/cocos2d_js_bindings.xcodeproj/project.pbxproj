@@ -255,6 +255,10 @@
 		40AB4DF521C6683700A96D1B /* Utils.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 40AB4D4A21C6683600A96D1B /* Utils.hpp */; };
 		40AB4DF621C6683700A96D1B /* Base.h in Headers */ = {isa = PBXBuildFile; fileRef = 40AB4D4B21C6683600A96D1B /* Base.h */; };
 		40AB4DF721C6683700A96D1B /* Base.h in Headers */ = {isa = PBXBuildFile; fileRef = 40AB4D4B21C6683600A96D1B /* Base.h */; };
+		40AB4ED121C693E000A96D1B /* xxtea.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 40AB4ECF21C693DF00A96D1B /* xxtea.cpp */; };
+		40AB4ED221C693E000A96D1B /* xxtea.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 40AB4ECF21C693DF00A96D1B /* xxtea.cpp */; };
+		40AB4ED321C693E000A96D1B /* xxtea.h in Headers */ = {isa = PBXBuildFile; fileRef = 40AB4ED021C693DF00A96D1B /* xxtea.h */; };
+		40AB4ED421C693E000A96D1B /* xxtea.h in Headers */ = {isa = PBXBuildFile; fileRef = 40AB4ED021C693DF00A96D1B /* xxtea.h */; };
 		4BE089E41ADF965E00D65D4B /* jsb_cocos2dx_experimental_webView_auto.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4BE089E01ADF965E00D65D4B /* jsb_cocos2dx_experimental_webView_auto.cpp */; };
 		4BE089E51ADF965E00D65D4B /* jsb_cocos2dx_experimental_webView_auto.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 4BE089E11ADF965E00D65D4B /* jsb_cocos2dx_experimental_webView_auto.hpp */; };
 		507B42181C31DCC60067B53E /* jsb_cocos2dx_builder_auto.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A119E3218BDF19200352BAA /* jsb_cocos2dx_builder_auto.cpp */; };
@@ -405,6 +409,9 @@
 		40AB4D4921C6683600A96D1B /* Class.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Class.cpp; sourceTree = "<group>"; };
 		40AB4D4A21C6683600A96D1B /* Utils.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Utils.hpp; sourceTree = "<group>"; };
 		40AB4D4B21C6683600A96D1B /* Base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base.h; sourceTree = "<group>"; };
+		40AB4EC121C6935700A96D1B /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		40AB4ECF21C693DF00A96D1B /* xxtea.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = xxtea.cpp; sourceTree = "<group>"; };
+		40AB4ED021C693DF00A96D1B /* xxtea.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xxtea.h; sourceTree = "<group>"; };
 		4BE089E01ADF965E00D65D4B /* jsb_cocos2dx_experimental_webView_auto.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = jsb_cocos2dx_experimental_webView_auto.cpp; sourceTree = "<group>"; };
 		4BE089E11ADF965E00D65D4B /* jsb_cocos2dx_experimental_webView_auto.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = jsb_cocos2dx_experimental_webView_auto.hpp; sourceTree = "<group>"; };
 		507B427D1C31DCC60067B53E /* libjscocos2d tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libjscocos2d tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -442,12 +449,14 @@
 		1551A334158F2AB200E66CFE = {
 			isa = PBXGroup;
 			children = (
+				40AB4EC521C693BB00A96D1B /* external */,
 				40AB4CF021C6683600A96D1B /* jswrapper */,
 				40AB4C6B21C6682600A96D1B /* manual */,
 				1A119E2E18BDF19200352BAA /* auto */,
 				1A5410A518B785A10016A3AF /* libjscocos2d iOS.a */,
 				1A5410A418B785A10016A3AF /* libjscocos2d Mac.a */,
 				507B427D1C31DCC60067B53E /* libjscocos2d tvOS.a */,
+				40AB4EC021C6935600A96D1B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -638,6 +647,32 @@
 			path = jsc;
 			sourceTree = "<group>";
 		};
+		40AB4EC021C6935600A96D1B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				40AB4EC121C6935700A96D1B /* JavaScriptCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		40AB4EC521C693BB00A96D1B /* external */ = {
+			isa = PBXGroup;
+			children = (
+				40AB4ECE21C693DF00A96D1B /* xxtea */,
+			);
+			name = external;
+			sourceTree = "<group>";
+		};
+		40AB4ECE21C693DF00A96D1B /* xxtea */ = {
+			isa = PBXGroup;
+			children = (
+				40AB4ECF21C693DF00A96D1B /* xxtea.cpp */,
+				40AB4ED021C693DF00A96D1B /* xxtea.h */,
+			);
+			name = xxtea;
+			path = ../../../../external/xxtea;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -683,6 +718,7 @@
 				40AB4CEE21C6682600A96D1B /* jsb_opengl_registration.hpp in Headers */,
 				40AB4D7021C6683600A96D1B /* node.h in Headers */,
 				40AB4D6821C6683600A96D1B /* http_parser.h in Headers */,
+				40AB4ED321C693E000A96D1B /* xxtea.h in Headers */,
 				1A119E8B18BDF19200352BAA /* jsb_cocos2dx_builder_auto.hpp in Headers */,
 				40AB4D7E21C6683600A96D1B /* util.h in Headers */,
 				40AB4CD621C6682600A96D1B /* jsb_opengl_functions.hpp in Headers */,
@@ -764,6 +800,7 @@
 				40AB4CDD21C6682600A96D1B /* jsb_conversions.hpp in Headers */,
 				40AB4DBF21C6683600A96D1B /* ScriptEngine.hpp in Headers */,
 				40AB4DCB21C6683700A96D1B /* Value.hpp in Headers */,
+				40AB4ED421C693E000A96D1B /* xxtea.h in Headers */,
 				40AB4D5B21C6683600A96D1B /* inspector_agent.h in Headers */,
 				40AB4D4F21C6683600A96D1B /* env.h in Headers */,
 				40AB4D7721C6683600A96D1B /* util-inl.h in Headers */,
@@ -936,6 +973,7 @@
 				40AB4D6A21C6683600A96D1B /* ScriptEngine.cpp in Sources */,
 				40AB4D8C21C6683600A96D1B /* node_debug_options.cc in Sources */,
 				40AB4DF221C6683700A96D1B /* Class.cpp in Sources */,
+				40AB4ED121C693E000A96D1B /* xxtea.cpp in Sources */,
 				40AB4D5821C6683600A96D1B /* node.cc in Sources */,
 				40AB4CE821C6682600A96D1B /* jsb_opengl_node.cpp in Sources */,
 				40AB4DA621C6683600A96D1B /* Class.cpp in Sources */,
@@ -1025,6 +1063,7 @@
 				40AB4CB721C6682600A96D1B /* jsb_platfrom_ios.m in Sources */,
 				40AB4CE921C6682600A96D1B /* jsb_opengl_node.cpp in Sources */,
 				40AB4DF321C6683700A96D1B /* Class.cpp in Sources */,
+				40AB4ED221C693E000A96D1B /* xxtea.cpp in Sources */,
 				40AB4DD721C6683700A96D1B /* Value.cpp in Sources */,
 				40AB4CE121C6682600A96D1B /* jsb_cocos2dx_manual.cpp in Sources */,
 				40AB4CC121C6682600A96D1B /* jsb_opengl_functions.cpp in Sources */,
